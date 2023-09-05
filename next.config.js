@@ -11,18 +11,15 @@ const nextConfig = {
 };
 
 module.exports = {
-    purge: [],
-    mode: 'jit',
-    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-    webpack(config) {
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: ["@svgr/webpack"]
-      });
-  
-      return config;
-    }
-  };
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
+  },
+};
 
 
 
