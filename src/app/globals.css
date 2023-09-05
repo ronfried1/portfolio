@@ -10,18 +10,84 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 228, 228, 231;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 24, 24, 27;
   }
 }
 
 body {
+  --tw-text-opacity: 1;
+    font-size: 16px;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  background: rgb(var(--background-end-rgb));
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  
+  .custom-shape-divider-bottom-1693505602 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1693505602 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 76px;
+  }
+  
+  .custom-shape-divider-bottom-1693505602 .shape-fill {
+    fill: #9e98b8;
+  }
+  
+  .custom-shape-divider-bottom-1693496676 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1693496676 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 76px;
+  }
+  
+  .custom-mask-image {
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEwMCIgaGVpZ2h0PSIxMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMTAwIj4NCiAgICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMTAwIDEwMCkiPg0KICAgICAgICA8cmVjdCB4PSIxMCIgeT0iMiIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIxNjAiIHJ4PSI4MCIgcnk9IjgwIiBmaWxsPSIjZjBmMGYwIiAvPg0KICAgIDwvZz4NCjwvc3ZnPg0K');
+    width: 45.5rem;
+    height: 48.5rem;
+    background-color: rgb(192, 184, 184);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+      
