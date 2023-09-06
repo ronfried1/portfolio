@@ -10,7 +10,7 @@ interface ContentProps {}
 const Content = (props: ContentProps): ReactElement => {
   return (
     <div className="flex items-center justify-center flex-wrap gap-24 mb-[4rem]">
-      <div className="flex flex-col mx-24 gap-5 text-xl xl:text-2xl leading-relaxed xl:flex-row text-gray-600">
+      <div className="flex flex-col mx-8 lg:mx-24 gap-5 text-xl xl:text-2xl leading-relaxed xl:flex-row text-gray-600">
         {renderContentBlock(
           <OneIcon />,
           <>
