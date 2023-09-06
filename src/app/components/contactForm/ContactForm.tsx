@@ -52,10 +52,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="flex flex-col gap-4">
-              <label
-                htmlFor="email"
-                className="block font-semibold text-white shadow-lg "
-              >
+              <label htmlFor="email" className="block font-semibold text-white">
                 Email:
               </label>
               <input
@@ -117,7 +114,7 @@ const ContactForm = () => {
               <InstagramIcon className={"fill-blue-500 hover:fill-gray-100"} />
             </a>
             <a
-              href="https://www.linkedin.com/in/ronfried/"
+              href="https://www.linkedin.com/in/ron-fried/"
               className="transform hover:scale-125 transition-transform"
             >
               <LinkedinIcon className={"fill-blue-500 hover:fill-gray-100"} />

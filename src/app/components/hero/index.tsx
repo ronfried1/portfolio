@@ -4,9 +4,8 @@ import CardBody from "./CardBody";
 import Image from "next/image";
 import LinkedinIcon from "../../../../public/images/social/linkedin.svg";
 import FacebookIcon from "../../../../public/images/social/facebook.svg";
+import InstagramIcon from "../../../../public/images/social/instagram.svg";
 import GitIcon from "../../../../public/images/tools/git.svg";
-import RonIcon from "../../../../public/images/mem.svg";
-import BackgroundIcon from "../../../../public/images/try.svg";
 
 type Props = {};
 
@@ -44,7 +43,7 @@ const Hero = (props: Props) => {
         </div>
       </div>
 
-      <div className="flex items-center gap-8 mb-32">
+      <div className="flex flex-col md:flex-row items-center gap-8 mb-32">
         <div className="flex">
           <a
             href="files/Ron-Fried-cv.pdf"
@@ -56,7 +55,7 @@ const Hero = (props: Props) => {
         </div>
         <div className="flex gap-4">
           <a
-            href="https://www.linkedin.com/in/ronfried/"
+            href="https://www.linkedin.com/in/ron-fried/"
             className="rounded-md border border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
           >
             <LinkedinIcon />
@@ -66,6 +65,12 @@ const Hero = (props: Props) => {
             className="rounded-md border border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
           >
             <FacebookIcon />
+          </a>
+          <a
+            href="https://www.facebook.com/ron.fried.3/"
+            className="rounded-md border border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
+          >
+            <InstagramIcon />
           </a>
           <a
             href="https://github.com/ronfried1"

@@ -3,7 +3,6 @@ import React from "react";
 import ImageCarousel from "./ImageCarousel";
 import Description from "./Description";
 import Stack from "./Stack";
-import Links from "./Links";
 
 type Props = {
   images: string[];

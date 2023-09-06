@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 type Props = { images: string[]; projectName: string };
 
@@ -12,6 +13,7 @@ const ImageCarousel = ({ images, projectName }: Props) => {
     swipeable: true,
     dynamicHeight: true,
     emulateTouch: true,
+
   });
 
   return (
