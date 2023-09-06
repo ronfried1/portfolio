@@ -46,7 +46,7 @@ const Hero = (props: Props) => {
       <div className="flex flex-col md:flex-row items-center gap-8 mb-32">
         <div className="flex">
           <a
-            href="files/Ron-Fried-cv.pdf"
+            href="/files/Ron-Fried-cv.pdf"
             target="_blank"
             className="h-12 font-bold rounded-md border border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
           >
