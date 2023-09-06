@@ -12,7 +12,7 @@ const Footer = () => {
           </div>
           <ul className="flex space-x-4 text-white">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="">Home</Link>
             </li>
             <li>
               <Link href="/projects">Projects</Link>

@@ -66,6 +66,21 @@ const Projects = (props: Props) => {
         gitHub={"https://github.com/ronfried1/chat-game-app"}
         website={"https://ronfried1.github.io/chat-game-app/"}
       />
+      <Project
+        images={["1", "2", "3"]}
+        projectName="portfolio"
+        description={
+          "This is my portfolio,a showcase of my projects and a glimpse into my skills and passions and how to reach me. "
+        }
+        stack={["Next.js", "Typescript", "Tailwind"]}
+        features={[
+          "Responsive app",
+          "Next.js 13 routing",
+          "Seamless User Experience",
+        ]}
+        gitHub={"https://github.com/ronfried1/portfolio"}
+        website={"https://ronfried-portfolio.vercel.app/"}
+      />
     </div>
   );
 };

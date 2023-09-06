@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className="flex justify-around items-center w-full h-full">
             {/* <Logo /> */}
             <ul className="flex justify-evenly w-full max-w-[900px]">
-              <NavItem title={"About"} href={"/"} />
+              <NavItem title={"About"} href={""} />
               <NavItem title={"Projects"} href={"projects"} />
               <NavItem title={"Contact"} href={"contact"} />
             </ul>
