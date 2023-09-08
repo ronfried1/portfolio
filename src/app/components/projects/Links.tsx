@@ -1,5 +1,4 @@
 import React from "react";
-import LinkedinIcon from "../../../../public/images/social/linkedin.svg";
 
 type Props = { gitHub?: string; website?: string };
 
@@ -9,7 +8,7 @@ const Links = ({ gitHub, website }: Props) => {
       {gitHub && (
         <a
           href={gitHub}
-          className=" leading-4 font-bold p-3.5 rounded-md  text-rose-500 border-4 border-rose-500  hover:bg-[#333333] hover:shadow-xl transition duration-300 transform hover:scale-105 text-white"
+          className=" leading-4 font-bold p-3.5 rounded-md border-4 border-rose-500  hover:bg-[#333333] hover:shadow-xl transition duration-300 transform hover:scale-105 text-white"
         >
           <span className="relative inline-block group">
             Github Repo
@@ -20,7 +19,7 @@ const Links = ({ gitHub, website }: Props) => {
       {website && (
         <a
           href={website}
-          className=" leading-4 font-bold p-3.5 rounded-md text-rose-500 border-4 border-rose-500  hover:bg-[#333333] hover:shadow-xl transition duration-300 transform hover:scale-105 text-white"
+          className=" leading-4 font-bold p-3.5 rounded-md border-4 border-rose-500  hover:bg-[#333333] hover:shadow-xl transition duration-300 transform hover:scale-105 text-white"
         >
           <span className="relative inline-block group">
             View Here

@@ -6,11 +6,11 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <div className="flex flex-col items-center   max-w-7xl m-auto animate-fade-in">
+    <div className="container flex flex-col items-center   max-w-7xl m-auto animate-fade-in">
       <h1 className="mt-32 text-2xl mb-16 font-bold  w-fit text-rose-500 border-4 border-rose-500 p-2">
         PROJECTS
       </h1>
-      <div className="container max-w-sm">
+      <div className="container max-w-sm lg:max-w-none">
         <Project
           images={["1", "2", "3"]}
           projectName="fastRide"
