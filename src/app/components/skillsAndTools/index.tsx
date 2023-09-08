@@ -7,9 +7,11 @@ type Props = {};
 
 const SkillsAndTools = (props: Props) => {
   return (
-    <div className="box-border flex-grow min-h-screen bg-violet-300 relative ">
-      <div className="mx-8 flex flex-col  pt-16 justify-center max-w-7xl xl:m-auto">
-        <Header />
+    <div className="box-border flex-grow min-h-screen bg-zinc-800 relative ">
+      <div className=" container w-fit  flex flex-col items-center mt-32 justify-center mx-auto  xl:mx-auto">
+        <h1 className="text-2xl mb-16 font-bold  w-fit text-rose-500 border-4 border-rose-500 p-2">
+          SKILLS & TOOLS
+        </h1>
         <Skills />
         <Footer />
       </div>
@@ -22,7 +24,7 @@ const SkillsAndTools = (props: Props) => {
         >
           <path
             d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-            className="fill-emerald-500"
+            fill="#18181b"
           ></path>
         </svg>
       </div>

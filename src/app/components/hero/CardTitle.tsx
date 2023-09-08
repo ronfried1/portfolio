@@ -5,13 +5,10 @@ type Props = {};
 
 const CardTitle = (props: Props) => {
   return (
-    <div className="font-bold text-white mb-4">
-      <h1 className={"animate-slide-in-right text-4xl xl:text-7xl"}>
-        Hi, my
-        <br className="hidden xl:block" /> name is
-        <br className=" xl:hidden" />
-        <b> Ron</b>
-        <span className={"text-lime-200"}>.</span>
+    <div className="text-white mb-4">
+      <h1 className={"animate-fade-in text-4xl xl:text-6xl"}>
+        {` Hey!, I'm Ron Fried `}
+        <span className={"text-rose-500"}>.</span>
       </h1>
     </div>
   );

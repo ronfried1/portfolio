@@ -1,26 +1,24 @@
 import React from "react";
 import Link from "next/link";
+import ContactForm from "../contactForm/ContactForm";
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-800">
-      <div className="container mx-auto py-6">
-        <div className="flex flex-col gap-4 text-center justify-between items-center md:flex-row">
-          <div className="text-white">
-            {/* Your footer content, such as copyright information */}© 2023
-            Designed & coded by Ron Fried. All rights reserved.
+    <footer id="contact" className="bg-zinc-800">
+      <div className="container flex flex-col gap-16 mx-auto py-6">
+        <div className="flex gap-4 mx-4 justify-between md:flex-row h-full">
+          <div className="flex flex-col w-full max-w-xl gap-16">
+            <h1 className="text-4xl font-bold xl:text-end mt-8">
+              Get In Touch{" "}
+            </h1>
+            <div className=" h-full relative border-t-8 border-r-8  text-rose-500  border-rose-500">
+              <div className="absolute bottom-0 right-0 w-[20%] h-2 bg-rose-500" />
+            </div>
           </div>
-          <ul className="flex space-x-4 text-white">
-            <li>
-              <Link href="">Home</Link>
-            </li>
-            <li>
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
+          <ContactForm />
+        </div>
+        <div className="text-white text-center mt-4">
+          © 2023 Ron Fried. All rights reserved.
         </div>
       </div>
     </footer>

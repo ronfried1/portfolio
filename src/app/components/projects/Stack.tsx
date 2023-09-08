@@ -13,7 +13,7 @@ const Stack = ({ stack, gitHub, website }: Props) => {
         <div className="flex gap-4 flex-wrap">
           {stack.map((item, index) => (
             <div
-              className="h-12 leading-4 font-bold p-3.5 rounded-md border border-zinc-600  hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl transition duration-300"
+              className="h-12 leading-4 font-bold p-3.5 rounded-md border border-zinc-600  "
               key={index}
             >
               {item}
@@ -21,7 +21,6 @@ const Stack = ({ stack, gitHub, website }: Props) => {
           ))}
         </div>
       </div>
-      <Links gitHub={gitHub} website={website} />
     </div>
   );
 };

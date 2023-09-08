@@ -7,20 +7,16 @@ const Description = ({ content, features }: Props) => {
     <div className="flex flex-col gap-4 mx-4">
       <div className="flex flex-col gap-2">
         <div className="text-2xl font-bold">Description</div>
-
         <div>{content}</div>
       </div>
-      <div className="text-2xl font-bold">Features include</div>
-      <ul>
-        {features.map((feature, index) => (
-          <li key={index}>
-            <span role="img" aria-label="">
-              ⚡️
-            </span>
-            {feature}
-          </li>
-        ))}
-      </ul>
+      <div className="flex flex-col gap-2">
+        <div className="text-2xl font-bold">Features include</div>
+        <ul>
+          {features.map((feature, index) => (
+            <li key={index}>• {feature}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -7,39 +7,19 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      screens: {
+        lg: "600px",
+        xl: "900px",
+        "2xl": "1280px",
+      },
+    },
     extend: {
       animation: {
         reveal: "reveal 2s cubic-bezier(.215,.61,.355,1)  both  ",
-        "spin-slow": "spin 3s linear infinite",
-        "slide-in-right": "slide-in-right 1.0s ease-out .25s both",
-        "slide-in-left": "slide-in-left 1.5s ease-out  both",
-        "slide-in": "slide-in 3s ease-in-out forwards",
         "fade-in": "fadeIn 1s ease-in-out forwards",
       },
-      animationDelay: {
-        0: "0ms", // No delay
-        500: "500ms", // 500ms delay
-        1000: "1000ms",
-      },
       keyframes: {
-        "slide-in-right": {
-          "0%": { transform: "translateX(100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        "slide-in-left": {
-          "0%": { transform: "translateX(-100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        "slide-in": {
-          "0%": {
-            transform: "translateX(100%) translateY(-100%) rotate(-45deg)",
-            opacity: "0",
-          },
-          "100%": {
-            transform: "translateX(0) translateY(0) rotate(0deg)",
-            opacity: "1",
-          },
-        },
         reveal: {
           "0%": {
             opacity: "0",
@@ -66,6 +46,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;

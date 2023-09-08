@@ -32,13 +32,13 @@ const tools = [
 
 const Skills = (props: Props) => {
   return (
-    <div className="flex items-center justify-between  md:justify-normal flex-wrap gap-4 mb-[6rem] ">
+    <div className="flex items-center justify-center xl:justify-normal max-w-[27rem] md:max-w-none md:justify-normal flex-wrap gap-4 mb-[6rem] ">
       {tools.map((ToolIcon, index) => {
         const Icon = ToolIcon.icon;
         return (
           <div
             key={index}
-            className="flex justify-center flex-col items-center text-xl lg:text-2xl w-24 lg:w-32"
+            className="flex justify-center flex-col items-center text-lg lg:text-xl w-24 lg:w-24"
           >
             <Icon width="70" height="70" />
             <p className="mt-4 text-gray-600">{ToolIcon.name}</p>
