@@ -6,13 +6,28 @@ import Sidebar from "./sidebar";
 const Navigation = () => {
   // toggle sidebar
   const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState<string | null>(null);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleItemClick = (item: string) => {
+    setSelected(item);
+  };
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Sidebar
+        handleItemClick={handleItemClick}
+        isOpen={isOpen}
+        toggle={toggle}
+        selected={selected}
+      />
+      <Navbar
+        selected={selected}
+        handleItemClick={handleItemClick}
+        toggle={toggle}
+      />
     </>
   );
 };

@@ -10,21 +10,17 @@ import Logo from "./Logo";
 
 interface Props {
   toggle: () => void;
+  selected: string | null;
+  handleItemClick: (item: string) => void;
 }
 
-const Navbar = ({ toggle }: Props) => {
-  const [selected, setSelected] = useState<string | null>(null);
-
-  const handleItemClick = (item: string) => {
-    setSelected(item);
-  };
-
+const Navbar = ({ toggle, selected, handleItemClick }: Props) => {
   return (
     <div className=" bg-zinc-800/95 sticky top-0 z-50">
-      <div className="flex justify-between box-border items-center mx-8  h-20">
+      <div className="flex justify-between box-border items-center mx-4 xl:mx-8  h-20">
         <div className="flex w-full">
           <Logo handleItemClick={handleItemClick} />
-          <ul className="flex items-center justify-evenly w-full max-w-xl">
+          <ul className="hidden md:flex items-center justify-evenly w-full max-w-xl">
             <NavItem
               title={"ABOUT ME"}
               href={"about"}

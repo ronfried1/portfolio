@@ -1,8 +1,4 @@
-"use client";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "./Button";
 
 interface Props {
   handleItemClick: (item: string) => void;
