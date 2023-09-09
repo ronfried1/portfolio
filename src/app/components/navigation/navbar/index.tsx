@@ -49,6 +49,7 @@ const Navbar = ({ toggle, selected, handleItemClick }: Props) => {
             <path fill="#fff" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z" />
           </svg>
         </button>
+
         <div className=" hidden md:flex flex-col md:flex-row items-center gap-4 ">
           <Link
             href="/files/Ron-Fried-cv.pdf"

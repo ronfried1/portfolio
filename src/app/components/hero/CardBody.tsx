@@ -27,7 +27,7 @@ const CardBody = (props: Props) => {
         <a
           href="/files/Ron-Fried-cv.pdf"
           target="_blank"
-          className="h-12 font-bold rounded-md border border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
+          className="h-12 leading-snug font-bold rounded-md border border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
         >
           CV
         </a>
