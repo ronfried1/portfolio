@@ -8,7 +8,7 @@ import Link from "next/link";
 const Navigation = () => {
   return (
     <>
-      <div className="navbar bg-base-100 sticky top-0 z-50 ">
+      <div className="navbar bg-zinc-800  sticky top-0 z-50 ">
         <div className="navbar-start ml-4">
           <a
             href="/"
