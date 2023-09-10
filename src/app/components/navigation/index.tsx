@@ -18,7 +18,7 @@ const Navigation = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal font-bold px-1">
             <li>
               <a href="/about">ABOUT</a>
             </li>
@@ -55,7 +55,7 @@ const Navigation = () => {
               <FacebookIcon />
             </a>
             <a
-              href="https://www.facebook.com/ron.fried.3/"
+              href="https://www.instagram.com/ron.fried/"
               className="rounded-md  border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
             >
               <InstagramIcon />
@@ -80,7 +80,7 @@ const Navigation = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm font-bold dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <a href="/about">ABOUT</a>
@@ -101,22 +101,22 @@ const Navigation = () => {
                 <a>SOCIAL</a>
                 <ul className="p-2">
                   <li>
-                    <a>
+                    <a href="https://www.linkedin.com/in/ron-fried/">
                       <LinkedinIcon />
                     </a>
                   </li>
                   <li>
-                    <a>
+                    <a href="https://github.com/ronfried1">
                       <GitIcon />
                     </a>
                   </li>
                   <li>
-                    <a>
+                    <a href="https://www.facebook.com/ron.fried.3/">
                       <FacebookIcon />
                     </a>
                   </li>
                   <li>
-                    <a>
+                    <a href="https://www.instagram.com/ron.fried/">
                       <InstagramIcon />
                     </a>
                   </li>

@@ -1,10 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import FacebookIcon from "../../../../public/images/social/facebook.svg";
-import LinkedinIcon from "../../../../public/images/social/linkedin.svg";
-import InstagramIcon from "../../../../public/images/social/instagram.svg";
-import GitIcon from "../../../../public/images/tools/git.svg";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("meqbkrap");

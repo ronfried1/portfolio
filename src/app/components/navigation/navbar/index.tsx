@@ -77,7 +77,7 @@ const Navbar = ({ toggle, selected, handleItemClick }: Props) => {
             <FacebookIcon />
           </Link>
           <Link
-            href="https://www.facebook.com/ron.fried.3/"
+            href="https://www.instagram.com/ron.fried/"
             className="rounded-md  border-zinc-600 p-3 text-white hover:bg-[#333333] hover:border-[#333333] hover:shadow-xl  duration-300 transform hover:scale-125 transition-transform"
           >
             <InstagramIcon />

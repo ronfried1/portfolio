@@ -1,11 +1,6 @@
 import React from "react";
 import CardTitle from "./CardTitle";
 import CardBody from "./CardBody";
-import Image from "next/image";
-import LinkedinIcon from "../../../../public/images/social/linkedin.svg";
-import FacebookIcon from "../../../../public/images/social/facebook.svg";
-import InstagramIcon from "../../../../public/images/social/instagram.svg";
-import GitIcon from "../../../../public/images/tools/git.svg";
 import CardImage from "./CardImage";
 
 type Props = {};
