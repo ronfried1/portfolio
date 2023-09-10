@@ -20,10 +20,14 @@ const Navigation = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal font-bold px-1">
             <li>
-              <a href="/about">ABOUT</a>
+              <a className="hover:text-white" href="/about">
+                ABOUT
+              </a>
             </li>
             <li>
-              <a href="/#projects">PORTFOLIO</a>
+              <a className="hover:text-white" href="/#projects">
+                PORTFOLIO
+              </a>
             </li>
           </ul>
         </div>
