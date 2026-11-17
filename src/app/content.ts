@@ -84,7 +84,7 @@ export const experience = [
   [
     "Firefly",
     "Full-Stack Developer · June 2025–present",
-    "I build React interfaces, Node.js APIs and Go services. As Full-Stack Guild lead and Code Owner, I guide technical decisions, review code and help set shared engineering standards.",
+    "I used Server-Sent Events to stream AI-generated infrastructure code and fixes into Firefly’s React interface as they were produced. I also developed Go services that discover Terraform variables and parse plans. As Full-Stack Guild lead and Code Owner, I guide technical decisions, review code and help set shared engineering standards.",
   ],
   [
     "Landly",
