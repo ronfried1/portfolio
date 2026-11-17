@@ -32,7 +32,7 @@ export default function Home() {
                 <ellipse cx="9" cy="9" rx="3" ry="7" />
                 <path d="M2 9h14" />
               </svg>
-              Tel Aviv, Israel
+              Bat Yam, Israel
             </span>
             <span className="meta-divider" />
             <a href={profile.github}>
@@ -108,18 +108,18 @@ export default function Home() {
               <p>{description}</p>
             </article>
           ))}
-          <div className="ai-note">
-            <h3>Working with AI</h3>
+          <article className="ai-note" id="typescript-migration">
+            <h3>Migrating JavaScript to TypeScript at Firefly</h3>
             <p>
-              I use AI coding tools to explore an implementation and produce a
-              working draft. For this portfolio, the checks included a
-              production build, keyboard testing and a side-by-side review of
-              the mobile and desktop layouts.
+              I built an AI-assisted workflow for converting JavaScript to
+              TypeScript one change at a time. Each conversion goes through
+              tests and type checks before the workflow prepares a pull request
+              for code review.
             </p>
-            <a className="text-link" href={profile.github}>
-              My public projects <Arrow direction="up" />
+            <a className="text-link" href={profile.cv}>
+              Read my CV <Arrow direction="down" />
             </a>
-          </div>
+          </article>
         </div>
       </section>
     </div>

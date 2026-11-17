@@ -43,8 +43,8 @@ export default function RootLayout({
             <nav aria-label="Main navigation">
               <a href="/#projects">Work</a>
               <a href="/#experience">Experience</a>
-              <a href={profile.cv} aria-label="Earlier CV (PDF)">
-                Earlier CV <Arrow direction="up" />
+              <a href={profile.cv} aria-label="CV (PDF)">
+                CV <Arrow direction="up" />
               </a>
               <a className="nav-contact" href="#contact">
                 Contact <Arrow direction="up" />
@@ -78,7 +78,7 @@ export default function RootLayout({
                   GitHub <Arrow direction="up" />
                 </a>
                 <a href={profile.cv}>
-                  Earlier CV · PDF <Arrow direction="down" />
+                  CV · PDF <Arrow direction="down" />
                 </a>
                 <Contact />
               </div>

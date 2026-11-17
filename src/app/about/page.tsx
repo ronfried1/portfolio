@@ -34,7 +34,7 @@ export default function About() {
             Experience <Arrow />
           </Link>
           <a className="text-link" href={profile.cv}>
-            Earlier CV · PDF <Arrow direction="down" />
+            CV · PDF <Arrow direction="down" />
           </a>
         </div>
       </div>

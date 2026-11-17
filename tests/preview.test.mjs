@@ -17,7 +17,7 @@ test("the index, experience and case routes render their content on the server",
   assert.equal((await fetch(new URL("/work/unknown-project", origin))).status, 404);
 });
 
-test("the original CV and the share image return valid file signatures", async () => {
+test("the current CV and the share image return valid file signatures", async () => {
   for (const [path, signature] of [
     ["/files/Ron-Fried-cv.pdf", Buffer.from("%PDF-")],
     ["/atlas/social.jpg", Buffer.from([0xff, 0xd8, 0xff])],

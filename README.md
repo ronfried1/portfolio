@@ -17,7 +17,7 @@ For a production preview, run `npm run build`, then `npm run start -- -H 127.0.0
 
 - Edit case studies, evidence URLs, experience and contact addresses in `src/app/content.ts`. The home and article routes share the same study records. The hero is in `src/app/page.tsx`; the biography is in `src/app/about/page.tsx`.
 - The design tokens, fonts and responsive rules are in `src/app/globals.css`. The artwork and controls are in `src/app/components/ParcelScene.tsx`. Keep the explanatory text and reduced-motion states together when changing a visual layer.
-- Replace `public/files/Ron-Fried-cv.pdf` after Ron supplies a current CV. Update every “Earlier CV” label at that point. The public URL is stable.
+- The current CV is Ron’s supplied 2026 PDF. Replace `public/files/Ron-Fried-cv.pdf` to update it while preserving the public URL.
 - The contact form progressively enhances an ordinary POST to the existing Formspree endpoint. Its address and retry behavior are in `src/app/components/Contact.tsx`. The direct email and professional links are independent of that service.
 - Metadata lives in `src/app/layout.tsx` and each route. The local social image and vector mark are in `public/atlas`. If the production hostname changes, update `metadataBase`.
 

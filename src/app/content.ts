@@ -83,8 +83,8 @@ export const studies = [
 export const experience = [
   [
     "Firefly",
-    "Full-stack engineering",
-    "My work spans the frontend and the backend-for-frontend (BFF). I also lead a full-stack engineering guild.",
+    "Full-Stack Developer · June 2025–present",
+    "I build React interfaces, Node.js APIs and Go services. As Full-Stack Guild lead and Code Owner, I guide technical decisions, review code and help set shared engineering standards.",
   ],
   [
     "Landly",
@@ -92,8 +92,13 @@ export const experience = [
     "I lead development of a real-estate platform that brings geographic data, planning content and parcel search together.",
   ],
   [
-    "Signature-it",
-    "Full-stack development",
+    "Aporia",
+    "Full-Stack Developer · 2023–May 2025",
+    "I led frontend development, configured and customized an IDE, and built applications and APIs backed by services on AWS.",
+  ],
+  [
+    "Signature-IT",
+    "Full-Stack Developer · 2022–2023",
     "I worked on React and Magento commerce applications, API integrations and deployment environments. I led the integration of Xdebug and Git blame into the team’s debugging workflow.",
   ],
 ];
