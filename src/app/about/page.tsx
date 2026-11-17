@@ -24,10 +24,9 @@ export default function About() {
           Music has also been part of my life.
         </p>
         <p>
-          These days my work takes me from React interfaces to the APIs and data
-          behind them. At Firefly, that includes frontend and
-          backend-for-frontend engineering. At Landly, I lead the technology
-          behind a platform for researching land.
+          At Firefly I build Go services, implement AI agents in the product,
+          and lead the Full-Stack Guild. Alongside that work, I lead technology
+          at Landly, a working startup for people researching land in Israel.
         </p>
         <div className="hero-actions">
           <Link className="button" href="/#experience">
@@ -37,6 +36,30 @@ export default function About() {
             CV · PDF <Arrow direction="down" />
           </a>
         </div>
+        <section className="map-credits" id="terrain-sources">
+          <h2>Terrain sources</h2>
+          <p>
+            The homepage compares two views of Mount Arbel near the Sea of
+            Galilee. The relief is exaggerated and the contours are 20 metres
+            apart. Contains modified Copernicus Sentinel data (2024). Elevation
+            data courtesy of the U.S. Geological Survey via Mapzen Terrain
+            Tiles.
+          </p>
+          <p>
+            <a
+              className="text-link"
+              href="https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_36SYB_20240509_0_L2A"
+            >
+              Satellite scene <Arrow direction="up" />
+            </a>{" "}
+            <a
+              className="text-link"
+              href="https://registry.opendata.aws/terrain-tiles/"
+            >
+              Terrain source <Arrow direction="up" />
+            </a>
+          </p>
+        </section>
       </div>
       <Image
         className="portrait"

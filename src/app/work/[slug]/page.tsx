@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Arrow } from "../../components/Marks";
 import ParcelScene from "../../components/ParcelScene";
+import StreamReplay from "../../components/StreamReplay";
 import { studies } from "../../content";
 
 type Props = { params: { slug: string } };
@@ -22,7 +23,7 @@ export function generateMetadata({ params }: Props) {
 }
 export default function CaseStudy({ params }: Props) {
   const study = getStudy(params.slug);
-  const other = studies.find((s) => s.slug !== study.slug)!;
+  const other = studies[(studies.indexOf(study) + 1) % studies.length];
   return (
     <article className="wrap case">
       <Link className="back-link" href="/#projects">
@@ -43,7 +44,9 @@ export default function CaseStudy({ params }: Props) {
           <h2>{study.title}</h2>
           <p className="lead">{study.intro}</p>
         </div>
-        {study.slug === "landly" ? (
+        {study.slug === "firefly" ? (
+          <StreamReplay />
+        ) : study.slug === "landly" ? (
           <ParcelScene inCase />
         ) : (
           <figure className="archive-shot">

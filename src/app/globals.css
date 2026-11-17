@@ -126,8 +126,6 @@ button {
 .button,
 .text-link,
 .hero-actions,
-.hero-meta,
-.location,
 .scene-heading,
 .scene-controls,
 .scene figcaption,
@@ -163,7 +161,6 @@ button {
   font-weight: 550;
 }
 .nav nav a,
-.hero-meta a,
 .scene figcaption a,
 .contact-options a,
 .archive li a,
@@ -192,29 +189,10 @@ button {
 .arrow-down {
   transform: rotate(90deg);
 }
-.hero {
-  display: grid;
-  grid-template-columns: 0.94fr 1.06fr;
-  align-items: center;
-  gap: clamp(30px, 4.5vw, 78px);
-  padding-block: clamp(44px, 4.9vw, 74px);
-}
-.hero h1,
 .about-page h1,
 .case-heading h1 {
   font-size: clamp(76px, 7.9vw, 120px);
   line-height: 0.9;
-}
-.hero h1 em {
-  font-size: 1.12em;
-}
-.hero-copy > p {
-  margin: 28px 0 24px;
-  max-width: 425px;
-  font-size: clamp(17px, 1.45vw, 22px);
-  line-height: 1.5;
-  color: var(--muted);
-  text-wrap: pretty;
 }
 .hero-actions {
   gap: 24px;
@@ -244,28 +222,6 @@ button {
 .button:active,
 .scene-controls label:active {
   scale: 0.98;
-}
-.hero-meta {
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: clamp(30px, 3.3vw, 52px);
-  font-size: 12px;
-  color: var(--muted);
-}
-.location {
-  gap: 7px;
-}
-.location svg {
-  width: 16px;
-  height: 16px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.2;
-}
-.meta-divider {
-  height: 12px;
-  width: 1px;
-  background: var(--line);
 }
 .scene {
   min-width: 0;
@@ -405,7 +361,6 @@ button {
   font-weight: 600;
   color: var(--ink);
 }
-.work-section,
 .experience-section {
   border-top: 1px solid var(--line);
   padding-block: 42px 64px;
@@ -419,81 +374,9 @@ h2 {
   margin: 0 0 28px;
 }
 .section-title > span,
-.study-name > span,
 .case-heading span {
   font-size: 12px;
   color: var(--muted);
-}
-.study-row {
-  display: grid;
-  grid-template-columns: 116px 1fr 1.18fr 50px;
-  gap: clamp(18px, 2.6vw, 40px);
-  align-items: center;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
-}
-.study-row:last-of-type {
-  border-bottom: 1px solid var(--line);
-}
-.study-row:hover {
-  text-decoration: none;
-}
-.study-row:hover .round-arrow {
-  background: var(--ink);
-  color: white;
-  transform: translateX(2px);
-}
-.thumb {
-  height: 76px;
-  border-radius: 5px;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-}
-.thumb-landly {
-  background:
-    linear-gradient(100deg, #24382222, #58713a22),
-    url(/atlas/valley.webp) 63% 61%/230%;
-}
-.thumb-fastride {
-  background: #ead2ad;
-}
-.ticket {
-  position: relative;
-  transform: rotate(-12deg);
-  color: #fff1ce;
-  background: #93412c;
-  font-size: 14px;
-  font-weight: 850;
-  line-height: 0.85;
-  letter-spacing: -0.01em;
-  padding: 8px 26px 8px 10px;
-  box-shadow: 2px 3px #8b593e3a;
-}
-.ticket i {
-  position: absolute;
-  height: 100%;
-  right: 9px;
-  top: 0;
-  border-left: 1px dashed #e7bb92;
-}
-.study-name h3 {
-  font-size: clamp(27px, 3.2vw, 43px);
-  margin-top: 5px;
-}
-.study-row p {
-  max-width: 390px;
-  color: var(--muted);
-}
-.round-arrow {
-  display: grid;
-  place-items: center;
-  justify-self: end;
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-  border: 1px solid #a2ad9f;
-  transition: transform 0.18s var(--ease);
 }
 .archive summary,
 .contact-options summary {
@@ -535,8 +418,7 @@ h2 {
   gap: 12px;
   justify-content: space-between;
 }
-.role h3,
-.ai-note h3 {
+.role h3 {
   font-size: 24px;
 }
 .role span {
@@ -544,21 +426,11 @@ h2 {
   color: var(--muted);
 }
 .role p,
-.ai-note p,
 .about-page p,
 .case-text p {
   color: var(--muted);
   margin: 12px 0 0;
   line-height: 1.65;
-}
-.ai-note {
-  margin-top: 24px;
-  padding: 24px;
-  background: #eaf0df;
-  border-radius: 8px;
-}
-.ai-note .text-link {
-  margin-top: 12px;
 }
 footer {
   color: #eef3e7;
@@ -722,13 +594,6 @@ input[type="radio"] {
   font-size: 24px;
 }
 @media (max-width: 1000px) {
-  .hero {
-    gap: 28px;
-    grid-template-columns: 0.9fr 1.1fr;
-  }
-  .hero h1 {
-    font-size: clamp(68px, 8.3vw, 86px);
-  }
   .scene-description {
     position: static;
     max-width: none;
@@ -763,23 +628,12 @@ input[type="radio"] {
     padding: 0;
     border: 0;
   }
+  .nav nav a[href$=".pdf"] {
+    min-width: 44px;
+    justify-content: center;
+  }
   .nav nav .arrow {
     display: none;
-  }
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding-block: 44px 32px;
-  }
-  .hero h1 {
-    font-size: clamp(70px, 13vw, 98px);
-  }
-  .hero-copy > p {
-    margin: 18px 0;
-    max-width: 490px;
-  }
-  .hero-meta {
-    margin-top: 20px;
   }
   .scene-heading {
     top: 14px;
@@ -798,38 +652,11 @@ input[type="radio"] {
   .scene-description {
     padding-inline: 16px;
   }
-  .work-section,
   .experience-section {
     padding-block: 32px 40px;
   }
   .section-title {
     margin-bottom: 19px;
-  }
-  .study-row {
-    grid-template-columns: 68px 1fr 30px;
-    gap: 4px 16px;
-    padding: 18px 0;
-  }
-  .thumb {
-    grid-row: span 2;
-    height: 60px;
-  }
-  .study-row p {
-    grid-column: 2;
-    font-size: 14px;
-    line-height: 1.45;
-  }
-  .study-row .round-arrow {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    width: 28px;
-    height: 28px;
-  }
-  .study-name h3 {
-    margin-top: 2px;
-  }
-  .study-name > span {
-    font-size: 11px;
   }
   .experience-section,
   .case-intro,
@@ -891,13 +718,6 @@ input[type="radio"] {
   .nav .brand {
     font-size: 16px;
   }
-  .hero-meta {
-    gap: 10px;
-  }
-  .study-row {
-    grid-template-columns: 55px 1fr 26px;
-    column-gap: 10px;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -923,5 +743,62 @@ input[type="radio"] {
   }
   .nav nav {
     gap: clamp(7px, 2vw, 12px);
+  }
+}
+
+.stream-replay {
+  background: #282735;
+  color: #ecebf6;
+  padding: clamp(20px, 3vw, 38px);
+  border-radius: 6px;
+}
+.stream-replay figcaption,
+.replay-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #d1cede;
+  font-size: 13px;
+}
+.stream-replay pre {
+  padding: 26px 0;
+  margin: 16px 0;
+  line-height: 1.65;
+  min-height: 11em;
+  border-block: 1px solid #565568;
+  color: #eeedbe;
+  font-size: clamp(14px, 1.3vw, 20px);
+}
+.replay-footer button {
+  background: #deddf4;
+  color: #292735;
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  min-height: 40px;
+}
+.stream-replay :focus-visible {
+  outline-color: #e1f599;
+}
+.map-credits {
+  max-width: 55ch;
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding-top: 20px;
+}
+.map-credits h2 {
+  font-size: 20px;
+}
+.map-credits p {
+  font-size: 14px;
+}
+.map-credits a {
+  margin-bottom: 5px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .replay-footer button {
+    display: none;
   }
 }

@@ -7,18 +7,49 @@ export const profile = {
 
 export const studies = [
   {
+    slug: "firefly",
+    name: "Firefly",
+    title: "Streaming infrastructure code",
+    kind: "Product engineering",
+    summary:
+      "Bringing AI agents into a cloud infrastructure product, from backend services to live output in React.",
+    role: "Full-Stack Developer",
+    intro:
+      "Infrastructure code takes time to generate. I built the streaming connection that lets Firefly display code and suggested fixes in the interface while the backend is still producing them.",
+    sections: [
+      [
+        "My contribution",
+        "I implement AI agents inside Firefly and work on the services and interfaces around them. For infrastructure code generation and remediation, my contribution included carrying the generated output from backend services into React.",
+      ],
+      [
+        "Why stream the result?",
+        "A single response can deliver a finished result. To show work in progress, the interface needs smaller updates before generation finishes. I used Server-Sent Events to send those updates from the service to the browser.",
+      ],
+      [
+        "What the visitor sees",
+        "The interface can show output as it arrives. The small replay here uses a local Terraform example to illustrate how individual fragments become readable code.",
+      ],
+      [
+        "Alongside the AI work",
+        "I also build Go services for Terraform variable discovery and plan parsing. As Full-Stack Guild lead and Code Owner, I guide technical decisions, review code and help set engineering standards across the guild.",
+      ],
+    ],
+    links: [["Read my CV", profile.cv]],
+  },
+  {
     slug: "landly",
     name: "Landly",
     title: "A parcel in context",
-    kind: "Geographic data",
-    summary: "Connecting a plot of land to the planning information around it.",
+    kind: "Independent startup",
+    summary:
+      "A live Israeli real-estate startup I build on the side. Search a parcel and explore the plans around it.",
     role: "Technology lead",
     intro:
       "A block and parcel number can identify a plot in Israel. It tells you very little about what surrounds it. Landly gives landowners and buyers a way to move from that identifier into planning information.",
     sections: [
       [
         "My responsibility",
-        "I lead the technical work on Landly’s digital platform. My scope spans the Next.js interface, content management, geographic data and the infrastructure that serves them. The wider Landly team brings the real-estate and planning expertise.",
+        "I build Landly alongside my role at Firefly. It’s a working startup for landowners and buyers in Israel, and I lead its technology. My scope spans the Next.js interface, content management, geographic data and the infrastructure that serves them. The wider Landly team brings the real-estate and planning expertise.",
       ],
       [
         "Two ways into the same place",
@@ -34,7 +65,7 @@ export const studies = [
       ],
     ],
     links: [
-      ["Explore Landly", "https://landly.co.il/"],
+      ["Open the live product", "https://landly.co.il/"],
       ["Meet the team", "https://landly.co.il/en/about-us"],
     ],
   },
@@ -71,7 +102,10 @@ export const studies = [
         "Inspect the booking flow",
         "https://github.com/ronfried1/The-Jungle-FastRide-app/blob/f7dccd7b35b4c5f71bb024a0e6144206b2d15890/src/pages/index.js",
       ],
-      ["Open the original demo", "https://the-jungle-fast-ride-app.vercel.app/"],
+      [
+        "Open the original demo",
+        "https://the-jungle-fast-ride-app.vercel.app/",
+      ],
       [
         "View the repository",
         "https://github.com/ronfried1/The-Jungle-FastRide-app",
@@ -84,12 +118,12 @@ export const experience = [
   [
     "Firefly",
     "Full-Stack Developer · June 2025–present",
-    "I used Server-Sent Events to stream AI-generated infrastructure code and fixes into Firefly’s React interface as they were produced. I also developed Go services that discover Terraform variables and parse plans. As Full-Stack Guild lead and Code Owner, I guide technical decisions, review code and help set shared engineering standards.",
+    "I build Go services that discover Terraform variables and parse plans, implement AI agents in the product, and work across the frontend and APIs. As Full-Stack Guild lead and Code Owner, I guide technical decisions and code reviews.",
   ],
   [
     "Landly",
     "Technology lead",
-    "I lead development of a real-estate platform that brings geographic data, planning content and parcel search together.",
+    "Alongside Firefly, I lead technology at Landly, our live real-estate startup. We help people research Israeli land through parcel search, geographic data and planning updates.",
   ],
   [
     "Aporia",

@@ -16,7 +16,7 @@ For a production preview, run `npm run build`, then `npm run start -- -H 127.0.0
 ## Edit
 
 - Edit case studies, evidence URLs, experience and contact addresses in `src/app/content.ts`. The home and article routes share the same study records. The hero is in `src/app/page.tsx`; the biography is in `src/app/about/page.tsx`.
-- The design tokens, fonts and responsive rules are in `src/app/globals.css`. The artwork and controls are in `src/app/components/ParcelScene.tsx`. Keep the explanatory text and reduced-motion states together when changing a visual layer.
+- The homepage terrain study and featured-work layout use `src/app/fieldwork.css` and `src/app/components/TerrainStudy.tsx`. Shared styles live in `src/app/globals.css`. The Landly case diagram and Firefly replay are in `ParcelScene.tsx` and `StreamReplay.tsx`. The design handoff documents imagery and elevation data.
 - The current CV is Ron’s supplied 2026 PDF. Replace `public/files/Ron-Fried-cv.pdf` to update it while preserving the public URL.
 - The contact form progressively enhances an ordinary POST to the existing Formspree endpoint. Its address and retry behavior are in `src/app/components/Contact.tsx`. The direct email and professional links are independent of that service.
 - Metadata lives in `src/app/layout.tsx` and each route. The local social image and vector mark are in `public/atlas`. If the production hostname changes, update `metadataBase`.

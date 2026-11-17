@@ -1,22 +1,26 @@
-# Parcel atlas
+# Terrain study
 
-A parcel is the most specific object shared by Ron’s work and a visitor’s curiosity. The home page pairs a direct professional introduction with a map that opens into layers. The same object remains recognizable as the reader switches from a product question to a system question.
+The opening pairs Ron’s name and role with a relief model of Mount Arbel. Dragging the scan line exposes a contour survey underneath the satellite image. The elevation profile follows the same cut through the landscape. This is an original portfolio study. The separate Landly case explains the startup and links to its live product.
 
 ## Visual system
 
-The page uses paper (#f8f8f1), dark green ink (#18271f), muted text (#445245), hairlines (#cdd2c5) and a survey-board green (#263d32). The lime highlight (#e3f398) identifies the selected view and parcel. All page-level tokens live at the beginning of `src/app/globals.css`. DM Sans carries prose, navigation and the first part of the display titles. Instrument Serif italic supplies the second voice. Both are local WOFF2 files with their licenses in `public/fonts`.
+The opening uses dark survey green (#152221), paper (#f3f3e4) and a chartreuse highlight (#dbf39a). Below it, warm paper (#f8f8f1) and green ink (#18271f) support longer reading. Local DM Sans and Instrument Serif italic carry the name, headings and navigation. The hero and featured-work rules live in `src/app/fieldwork.css`. Shared navigation, articles, contact and the Landly diagram use `src/app/globals.css`.
 
-The desktop opening uses two columns. At 740px it becomes a reading sequence with the introduction first, then the interactive parcel. Project rows, the experience list and the article template share one content width. Inline links, a skip link and persistent navigation keep the longer pages traversable.
+On desktop, Ron’s name stacks next to the landscape. On phones the name moves onto one line, then the introduction, the instrument and the case studies follow. Firefly and Landly get the first two project links. The earlier FastRide project remains directly accessible through its original case route.
 
-## Interaction
+## Interaction and assets
 
-Two native radio controls show a composed parcel or an exploded view. Arrow keys move between them after focus enters the group. The CSS moves three geometric layers over 340ms. Reduced motion switches them instantly. Both descriptions are HTML, and the narrow layout uses an explanatory sentence in place of small in-diagram labels. The illustration and switch work with scripting disabled. Each case has its own URL.
+- `TerrainStudy.tsx` reveals two registered WebP plates with a native range input. The thumb tracks the pointer directly. Arrow, Home and End keys work, touch can scroll vertically, and nothing plays on entry. The initial comparison and its description render as HTML with scripting disabled. Small screens receive 720px plates. There are no map-service requests at runtime.
+- The profile contains 101 horizontal scan positions, with up to 48 elevation samples along each cut. Sample heights are rounded to metres. At either end, the line is outside the relief block. Both the readout and screen-reader value reflect this. Store revised samples in `src/app/data/arbel-profiles.json` together with any replacement for the plates.
+- `StreamReplay.tsx` is a local, illustrative replay of ten text fragments becoming one Terraform declaration. Visitors start it explicitly. In reduced-motion mode or without JavaScript, the completed example remains readable.
+- The Landly article retains the separate product/system diagram. Its Californian stand-in imagery comes from USDA and USGS The National Map. [Source service](https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer)
 
-The scene is a teaching illustration. Its selected outline and system layers are illustrative. The aerial is of California’s Sacramento–San Joaquin Delta, used as a stand-in. The public Landly case describes the actual product and team scope. Imagery credit belongs to USDA and USGS The National Map, Orthoimagery. [Source service](https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer)
+## Terrain provenance
 
-## Direction comparison
+Contains modified Copernicus Sentinel data (2024). The optical image uses a May 9 Sentinel-2 L2A true-color scene. The bounds in longitude and latitude are 35.436°–35.552° E and 32.799°–32.896° N. Elevation uses Mapzen Terrarium tiles at zoom 12, with global terrain data courtesy of the U.S. Geological Survey. The optical and elevation grids were aligned to the same geographic extent, then projected through the same camera. The displayed contour interval is 20 m. The vertical scale is exaggerated and the exposed sides are illustrative. [Satellite scene](https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_36SYB_20240509_0_L2A) · [Elevation dataset](https://registry.opendata.aws/terrain-tiles/) · [Terrain attribution](https://github.com/tilezen/joerd/blob/master/docs/attribution.md)
 
-- **Parcel atlas, selected.** A visitor can inspect what sits behind a geographic lookup in one action, then move into the public product. [Product view](docs/review/desktop.jpg) · [System view](docs/review/system.jpg)
-- **Engineering edition.** A type-led broadsheet builds an entire opening around FastRide’s PIN validator. It gives one code decision more space, but puts an older project ahead of Ron’s current work. [Rendered direction](docs/directions/edition.jpg) · [Interactive prototype](docs/directions/edition.html)
+For a replacement render, the study used a 145 × 145 mesh over a 1024 × 1024 source raster. At normalized geographical coordinates (u, v) running east and south, the 1456 × 878 cropped image has pixel coordinates x = 470 + 975u − 452v and y = 220 + 295u + 302v − 0.43(h + 215), with h in metres. Cross-sections vary v over the intersection of each constant-x line with the geographic square. The background topographic lines are derived from the same elevation grid.
 
-The browser prototypes let us judge keyboard, touch and reduced-motion behavior in the same medium as the deliverable. They served as the design review surface.
+## Previews
+
+[Desktop](docs/review/desktop.jpg) · [Mobile](docs/review/mobile.jpg) · [Terrain scan](docs/review/terrain-scan.jpg) · [Firefly case](docs/review/firefly.jpg) · [Earlier editorial alternative](docs/directions/edition.html)

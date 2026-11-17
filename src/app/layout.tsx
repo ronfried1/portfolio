@@ -7,7 +7,7 @@ import { profile } from "./content";
 
 const title = "Ron Fried — Full-stack engineer";
 const description =
-  "Explore Ron Fried’s full-stack engineering work, from geographic data at Landly to frontend and API development.";
+  "Explore Ron Fried’s full-stack engineering work, from Go services and in-product AI agents at Firefly to Landly, his independent real-estate startup.";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ronfried-portfolio.vercel.app"),
   title: { default: title, template: "%s | Ron Fried" },

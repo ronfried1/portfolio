@@ -7,6 +7,7 @@ test("the index, experience and case routes render their content on the server",
   for (const [path, text] of [
     ["/", "Explore my work"],
     ["/about", "Before I built software"],
+    ["/work/firefly", "Streaming infrastructure code"],
     ["/work/landly", "A parcel in context"],
     ["/work/fastride", "Remembering a ride reservation"],
   ]) {
@@ -27,4 +28,14 @@ test("the current CV and the share image return valid file signatures", async ()
     const bytes = Buffer.from(await response.arrayBuffer());
     assert.deepEqual(bytes.subarray(0, signature.length), signature);
   }
+});
+
+test("the terrain readout covers the scan in whole-metre samples", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const samples = JSON.parse(await readFile(new URL("../src/app/data/arbel-profiles.json", import.meta.url), "utf8"));
+  assert.equal(samples.length, 101);
+  assert.deepEqual(samples[0], []);
+  assert.deepEqual(samples[100], []);
+  assert.ok(samples[68].length === 48 && Math.max(...samples[68]) > Math.min(...samples[68]));
+  assert.ok(samples.flat().every(Number.isInteger));
 });
