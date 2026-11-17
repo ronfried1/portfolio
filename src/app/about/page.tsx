@@ -1,20 +1,50 @@
-import React from "react";
-import AboutMe from "../components/aboutMe";
+import Image from "next/image";
+import Link from "next/link";
+import { Arrow } from "../components/Marks";
+import { profile } from "../content";
 
-type Props = {};
-
-const About = (props: Props) => {
-  return (
-    <div className="  min-h-screen w-full relative  max-w-7xl m-auto animate-fade-in ">
-      <div className="flex flex-col w-full justify-center items-center py-32 m-auto max-h-full">
-        <h1 className="text-2xl mb-16 font-bold  w-fit text-rose-500  border-4 border-rose-500 p-2 ">
-          About me
-        </h1>
-        <AboutMe />
-      </div>
-      <div className="custom-shape-divider-bottom-1693505602"></div>
-    </div>
-  );
+export const metadata = {
+  title: "About Ron",
+  description:
+    "Ron Fried’s background in software engineering, music and running a bar in Tel Aviv.",
 };
 
-export default About;
+export default function About() {
+  return (
+    <article className="wrap about-page">
+      <div>
+        <Link className="back-link" href="/">
+          ← Portfolio
+        </Link>
+        <h1>
+          About <em>Ron.</em>
+        </h1>
+        <p className="lead">
+          Before I built software professionally, I owned a bar in Tel Aviv.
+          Music has also been part of my life.
+        </p>
+        <p>
+          These days my work takes me from React interfaces to the APIs and data
+          behind them. At Firefly, that includes frontend and
+          backend-for-frontend engineering. At Landly, I lead the technology
+          behind a platform for researching land.
+        </p>
+        <div className="hero-actions">
+          <Link className="button" href="/#experience">
+            Experience <Arrow />
+          </Link>
+          <a className="text-link" href={profile.cv}>
+            Earlier CV · PDF <Arrow direction="down" />
+          </a>
+        </div>
+      </div>
+      <Image
+        className="portrait"
+        src="/images/ron.png"
+        width={600}
+        height={800}
+        alt="Ron Fried"
+      />
+    </article>
+  );
+}
