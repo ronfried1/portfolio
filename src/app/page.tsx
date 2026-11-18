@@ -56,17 +56,21 @@ export default function Home() {
                     >
                       {study.slug === "firefly" ? (
                         <svg
+                          aria-hidden="true"
                           viewBox="0 0 620 160"
                           preserveAspectRatio="xMidYMid slice"
                         >
                           <g fill="none" strokeWidth="1.3">
-                            {Array.from({ length: 24 }, (_, i) => (
-                              <path
-                                key={i}
-                                stroke={i % 5 === 0 ? "#e6ecc7" : "#9b9dea"}
-                                d={`M-15 ${32 + i * 4} C110 ${32 + i * 4} 130 ${148 - i * 7} 230 ${112 - i * 3} S332 ${-76 + i * 8} 405 ${21 + i * 4} S510 ${149 - i * 3} 650 ${58 + i * 1.8}`}
-                              />
-                            ))}
+                            {Array.from({ length: 24 }, (_, i) => {
+                              const curve = `M-15 ${32 + i * 4} C110 ${32 + i * 4} 130 ${148 - i * 7} 230 ${112 - i * 3} S332 ${-76 + i * 8} 405 ${21 + i * 4} S510 ${149 - i * 3} 650 ${58 + i * 1.8}`;
+                              return (
+                                <path
+                                  key={curve}
+                                  d={curve}
+                                  stroke={i % 5 === 0 ? "#e6ecc7" : "#9b9dea"}
+                                />
+                              );
+                            })}
                           </g>
                         </svg>
                       ) : (

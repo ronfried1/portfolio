@@ -720,6 +720,7 @@ input[type="radio"] {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  /* biome-ignore-start lint/complexity/noImportantStyles: Reduced motion takes precedence over component effects. */
   *,
   *::before,
   *::after {
@@ -727,6 +728,7 @@ input[type="radio"] {
     transition: none !important;
     animation: none !important;
   }
+  /* biome-ignore-end lint/complexity/noImportantStyles: End of the reduced-motion override. */
 }
 .contact-options button:disabled {
   cursor: wait;

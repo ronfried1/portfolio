@@ -1,5 +1,11 @@
 # Review record
 
+## Toolchain upgrade · November 18, 2026
+
+The production build used Node 26.13.1 LTS, Next.js 16.4.6 with Turbopack, React 19.3.1 and TypeScript 7.0.2. A clean installation from the lockfile passed strict peer dependency checks. Biome and TypeScript passed. npm’s full dependency audit reported zero known vulnerabilities at review time.
+
+The dev server and production build passed the committed route, 404, download and terrain-data tests. In Chromium, the production build passed the keyboard and touch terrain checks, stream replay, parcel view switch, reduced-motion and JavaScript-disabled fallbacks, and simulated form failure and retry. Axe reported zero violations in the tested WCAG A/AA rules across all five routes. Desktop and mobile comparisons with the then-live site covered the home, About, Firefly and Landly pages.
+
 ## Mount Arbel redesign · November 18, 2026
 
 The production preview on port 4176 served the home page, About, and the Firefly, Landly and FastRide cases. The build, lint, TypeScript and all three committed smoke tests passed. The linked 2026 CV was byte-identical to Ron’s new download.
@@ -15,7 +21,7 @@ The production preview on port 4176 served the home page, About, and the Firefly
 
 The Impeccable visual review prompted the explicit “Terrain study” label. Its static detector reported no findings in the two new interactive components, home page and fieldwork styles. Emil’s interaction guidance informed the direct, interruptible drag and the visitor-triggered stream replay. The larger desktop and smaller mobile plates share one camera projection and both views work without WebGL.
 
-Physical-device and assistive-technology testing, Safari, Firefox and field performance remain unverified. The dependency findings below still apply to this branch.
+Physical-device and assistive-technology testing, Safari, Firefox and field performance remain unverified. The original dependency findings are recorded below.
 
 ## Taste visual review
 
@@ -73,10 +79,10 @@ FAIL screen-short     section.field-hero section.field-hero "Ron Fried.Full-stac
 
 </details>
 
-## Release considerations
+## Release considerations at the time of the redesign
 
 - The Firefly article now uses the CV’s streaming integration and Ron’s description of his in-product agent work. Landly’s start date and formal CTO title remain open if Ron wants either published.
-- The existing lockfile was retained for review. On November 17, `npm audit --omit=dev` reported 46 affected package entries, including 18 critical and 21 high. Next.js itself was rated critical. These counts include transitive tooling and do not establish exploitable paths in this application. Plan and test the framework and dependency upgrade separately before public release.
+- The existing lockfile was retained for review. On November 17, `npm audit --omit=dev` reported 46 affected package entries, including 18 critical and 21 high. Next.js itself was rated critical. These counts include transitive tooling and do not establish exploitable paths in this application. The separate toolchain upgrade is recorded in the repository history.
 - No merge, push, production deployment, or change to the existing Vercel project was performed.
 
 ## Previous review

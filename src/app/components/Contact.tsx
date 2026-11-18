@@ -47,7 +47,7 @@ export default function Contact() {
           Message
           <textarea rows={3} name="message" required />
         </label>
-        <button disabled={status === "sending"} className="button">
+        <button type="submit" disabled={status === "sending"} className="button">
           {status === "sending" ? "Sending…" : "Send message"} <Arrow />
         </button>
         <div role="status">

@@ -4,14 +4,15 @@ An English-language Next.js portfolio with direct links to work, experience, CV 
 
 ## Run and review
 
-Use the repository lockfile. The review ran on Node 24.16.0 with Next.js 13.4.16, React 18.2.0, TypeScript 5.1.6 and Tailwind 3.
+Use Node.js 26 LTS and npm. Next.js 16 builds the App Router site with Turbopack. The components use React 19, TypeScript 7 and plain CSS. Biome checks the source and tests. Exact package versions are in `package-lock.json`.
 
 ```sh
+nvm install
 npm ci
 npm run dev
 ```
 
-For a production preview, run `npm run build`, then `npm run start -- -H 127.0.0.1 -p 4176`. Run `npm run lint` and `npx tsc --noEmit`. With the production preview running, `node --test tests/preview.test.mjs` checks the public routes and downloadable assets.
+For a production preview, run `npm run build`, then `npm run start -- -H 127.0.0.1 -p 4176`. Run `npm run lint` and `npm run typecheck`. With the preview running, `npm test` checks the public routes, current CV and share image. Set `PORTFOLIO_PREVIEW_URL` to run the same checks on a Vercel deployment.
 
 ## Edit
 
@@ -23,6 +24,6 @@ For a production preview, run `npm run build`, then `npm run start -- -H 127.0.0
 
 ## Release
 
-The pre-existing public portfolio is hosted on Vercel. The repository has no deployment workflow or project settings checked in. A future release should reconcile the dependency findings and career copy, run the production checks above and use the existing Vercel project after Ron approves. Keep the review branch local until external publication is authorized.
+The production site runs at [www.ron-fried.com](https://www.ron-fried.com/) in the Vercel project `portfolio-2mjp`. Vercel builds previews from GitHub branches and reads the runtime major from `engines.node`. Check the branch deployment before publishing to the production domain.
 
 [Product brief](PRODUCT.md) · [Design and previews](DESIGN.md) · [Research and evidence](docs/research.md) · [Validation record](docs/validation.md)

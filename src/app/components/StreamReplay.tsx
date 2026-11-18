@@ -31,7 +31,7 @@ export default function StreamReplay() {
         <span>Illustrative stream</span>
         <span>Terraform</span>
       </figcaption>
-      <pre aria-label="Illustrative Terraform variable">
+      <pre>
         <code aria-hidden="true">{fragments.slice(0, received).join("")}</code>
         <span className="sr-only">{fragments.join("")}</span>
       </pre>

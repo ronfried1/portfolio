@@ -6,7 +6,6 @@ import ParcelScene from "../../components/ParcelScene";
 import StreamReplay from "../../components/StreamReplay";
 import { studies } from "../../content";
 
-type Props = { params: { slug: string } };
 function getStudy(slug: string) {
   return studies.find((study) => study.slug === slug) ?? notFound();
 }
@@ -14,15 +13,15 @@ export const dynamicParams = false;
 export function generateStaticParams() {
   return studies.map(({ slug }) => ({ slug }));
 }
-export function generateMetadata({ params }: Props) {
-  const study = getStudy(params.slug);
+export async function generateMetadata({ params }: PageProps<"/work/[slug]">) {
+  const study = getStudy((await params).slug);
   return {
     title: study.name + " — " + study.title,
     description: study.summary,
   };
 }
-export default function CaseStudy({ params }: Props) {
-  const study = getStudy(params.slug);
+export default async function CaseStudy({ params }: PageProps<"/work/[slug]">) {
+  const study = getStudy((await params).slug);
   const other = studies[(studies.indexOf(study) + 1) % studies.length];
   return (
     <article className="wrap case">
